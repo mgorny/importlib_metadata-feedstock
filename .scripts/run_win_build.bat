@@ -91,17 +91,17 @@ if EXIST %FEEDSTOCK_ROOT%\LICENSE.txt (
 )
 
 if NOT [%flow_run_id%] == [] (
-        set "EXTRA_CB_OPTIONS=%EXTRA_CB_OPTIONS% --extra-meta flow_run_id=%flow_run_id% --extra-meta remote_url=%remote_url% --extra-meta sha=%sha%"
+        set "EXTRA_CB_OPTIONS=%EXTRA_CB_OPTIONS% --extra-meta flow_run_id=%flow_run_id% remote_url=%remote_url% sha=%sha%"
 )
 
 :: Build the recipe
 echo Building recipe
 
-rattler-build.exe build ^
-    --recipe "%RECIPE_ROOT%" ^
+conda-build.exe ^
+    "%RECIPE_ROOT%" ^
     -m %CONFIG_FILE% ^
     %EXTRA_CB_OPTIONS% ^
-    --target-platform %HOST_PLATFORM%
+    --suppress-variables
 
 if !errorlevel! neq 0 exit /b !errorlevel!
 

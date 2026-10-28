@@ -29,194 +29,62 @@ description = "Lint the feedstock recipe"
 [feature.build.dependencies]
 conda-build = ">=26.3"
 conda-forge-ci-setup = "4.*"
-rattler-build = "*"
+python = "3.14.*"
 
 [feature.build.tasks.inspect-all]
 cmd = "inspect_artifacts --all-packages"
-description = "List contents of all packages found in rattler-build build directory."
+description = "List contents of all packages found in conda-build build directory."
 [feature.build.tasks.build]
-cmd = "rattler-build build --recipe recipe"
+cmd = "conda-build build recipe"
 description = "Build importlib_metadata-feedstock directly (without setup scripts), no particular variant specified"
-[feature.build.tasks."build-linux_64_python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.11.____cpython.yaml --target-platform linux-64"
-description = "Build importlib_metadata-feedstock with variant linux_64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_python3.11.____cpython.yaml --target-platform linux-64"
-description = "Debug importlib_metadata-feedstock with variant linux_64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.11.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_python3.11.____cpython"
-[feature.build.tasks."build-linux_64_python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.12.____cpython.yaml --target-platform linux-64"
-description = "Build importlib_metadata-feedstock with variant linux_64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_python3.12.____cpython.yaml --target-platform linux-64"
-description = "Debug importlib_metadata-feedstock with variant linux_64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.12.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_python3.12.____cpython"
-[feature.build.tasks."build-linux_64_python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.13.____cp313.yaml --target-platform linux-64"
-description = "Build importlib_metadata-feedstock with variant linux_64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_python3.13.____cp313.yaml --target-platform linux-64"
-description = "Debug importlib_metadata-feedstock with variant linux_64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.13.____cp313.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_python3.13.____cp313"
-[feature.build.tasks."build-linux_64_python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.14.____cp314.yaml --target-platform linux-64"
-description = "Build importlib_metadata-feedstock with variant linux_64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_python3.14.____cp314.yaml --target-platform linux-64"
-description = "Debug importlib_metadata-feedstock with variant linux_64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.14.____cp314.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_python3.14.____cp314"
-[feature.build.tasks."build-linux_aarch64_python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.11.____cpython.yaml --target-platform linux-aarch64"
-description = "Build importlib_metadata-feedstock with variant linux_aarch64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_python3.11.____cpython.yaml --target-platform linux-aarch64"
-description = "Debug importlib_metadata-feedstock with variant linux_aarch64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.11.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_python3.11.____cpython"
-[feature.build.tasks."build-linux_aarch64_python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.12.____cpython.yaml --target-platform linux-aarch64"
-description = "Build importlib_metadata-feedstock with variant linux_aarch64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_python3.12.____cpython.yaml --target-platform linux-aarch64"
-description = "Debug importlib_metadata-feedstock with variant linux_aarch64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.12.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_python3.12.____cpython"
-[feature.build.tasks."build-linux_aarch64_python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.13.____cp313.yaml --target-platform linux-aarch64"
-description = "Build importlib_metadata-feedstock with variant linux_aarch64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_python3.13.____cp313.yaml --target-platform linux-aarch64"
-description = "Debug importlib_metadata-feedstock with variant linux_aarch64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.13.____cp313.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_python3.13.____cp313"
-[feature.build.tasks."build-linux_aarch64_python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.14.____cp314.yaml --target-platform linux-aarch64"
-description = "Build importlib_metadata-feedstock with variant linux_aarch64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_python3.14.____cp314.yaml --target-platform linux-aarch64"
-description = "Debug importlib_metadata-feedstock with variant linux_aarch64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.14.____cp314.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_python3.14.____cp314"
-[feature.build.tasks."build-osx_64_python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.11.____cpython.yaml --target-platform osx-64"
-description = "Build importlib_metadata-feedstock with variant osx_64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_python3.11.____cpython.yaml --target-platform osx-64"
-description = "Debug importlib_metadata-feedstock with variant osx_64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.11.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_python3.11.____cpython"
-[feature.build.tasks."build-osx_64_python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.12.____cpython.yaml --target-platform osx-64"
-description = "Build importlib_metadata-feedstock with variant osx_64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_python3.12.____cpython.yaml --target-platform osx-64"
-description = "Debug importlib_metadata-feedstock with variant osx_64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.12.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_python3.12.____cpython"
-[feature.build.tasks."build-osx_64_python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.13.____cp313.yaml --target-platform osx-64"
-description = "Build importlib_metadata-feedstock with variant osx_64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_python3.13.____cp313.yaml --target-platform osx-64"
-description = "Debug importlib_metadata-feedstock with variant osx_64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.13.____cp313.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_python3.13.____cp313"
-[feature.build.tasks."build-osx_64_python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.14.____cp314.yaml --target-platform osx-64"
-description = "Build importlib_metadata-feedstock with variant osx_64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_python3.14.____cp314.yaml --target-platform osx-64"
-description = "Debug importlib_metadata-feedstock with variant osx_64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.14.____cp314.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_python3.14.____cp314"
-[feature.build.tasks."build-osx_arm64_python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml --target-platform osx-arm64"
-description = "Build importlib_metadata-feedstock with variant osx_arm64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml --target-platform osx-arm64"
-description = "Debug importlib_metadata-feedstock with variant osx_arm64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_python3.11.____cpython"
-[feature.build.tasks."build-osx_arm64_python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml --target-platform osx-arm64"
-description = "Build importlib_metadata-feedstock with variant osx_arm64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml --target-platform osx-arm64"
-description = "Debug importlib_metadata-feedstock with variant osx_arm64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_python3.12.____cpython"
-[feature.build.tasks."build-osx_arm64_python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml --target-platform osx-arm64"
-description = "Build importlib_metadata-feedstock with variant osx_arm64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml --target-platform osx-arm64"
-description = "Debug importlib_metadata-feedstock with variant osx_arm64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_python3.13.____cp313"
-[feature.build.tasks."build-osx_arm64_python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml --target-platform osx-arm64"
-description = "Build importlib_metadata-feedstock with variant osx_arm64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml --target-platform osx-arm64"
-description = "Debug importlib_metadata-feedstock with variant osx_arm64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_python3.14.____cp314"
-[feature.build.tasks."build-win_64_python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.11.____cpython.yaml --target-platform win-64"
-description = "Build importlib_metadata-feedstock with variant win_64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-win_64_python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_python3.11.____cpython.yaml --target-platform win-64"
-description = "Debug importlib_metadata-feedstock with variant win_64_python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-win_64_python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.11.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant win_64_python3.11.____cpython"
-[feature.build.tasks."build-win_64_python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.12.____cpython.yaml --target-platform win-64"
-description = "Build importlib_metadata-feedstock with variant win_64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-win_64_python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_python3.12.____cpython.yaml --target-platform win-64"
-description = "Debug importlib_metadata-feedstock with variant win_64_python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-win_64_python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.12.____cpython.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant win_64_python3.12.____cpython"
-[feature.build.tasks."build-win_64_python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.13.____cp313.yaml --target-platform win-64"
-description = "Build importlib_metadata-feedstock with variant win_64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-win_64_python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_python3.13.____cp313.yaml --target-platform win-64"
-description = "Debug importlib_metadata-feedstock with variant win_64_python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-win_64_python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.13.____cp313.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant win_64_python3.13.____cp313"
-[feature.build.tasks."build-win_64_python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.14.____cp314.yaml --target-platform win-64"
-description = "Build importlib_metadata-feedstock with variant win_64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-win_64_python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_python3.14.____cp314.yaml --target-platform win-64"
-description = "Debug importlib_metadata-feedstock with variant win_64_python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-win_64_python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.14.____cp314.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant win_64_python3.14.____cp314"
+[feature.build.tasks.debug]
+cmd = "conda-build debug recipe"
+description = "Debug importlib_metadata-feedstock directly (without setup scripts), no particular variant specified"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/linux_64_.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_64_ directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_"]
+cmd = "conda-build debug recipe -m .ci_support/linux_64_.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_64_ directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/linux_aarch64_.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_aarch64_.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_aarch64_ directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_"]
+cmd = "conda-build debug recipe -m .ci_support/linux_aarch64_.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_aarch64_ directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_64_.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_64_ directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_"]
+cmd = "conda-build debug recipe -m .ci_support/osx_64_.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_64_ directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_arm64_.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_arm64_ directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_"]
+cmd = "conda-build debug recipe -m .ci_support/osx_arm64_.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_arm64_ directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/win_64_.yaml --suppress-variables --clobber-file .ci_support/clobber_win_64_.yaml"
+description = "Build importlib_metadata-feedstock with variant win_64_ directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_"]
+cmd = "conda-build debug recipe -m .ci_support/win_64_.yaml"
+description = "Debug importlib_metadata-feedstock with variant win_64_ directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant win_64_"
 
 [environments]
 build = ["build"]
