@@ -34,6 +34,8 @@ outputs:
 
   - package:
       name: importlib_metadata
+    build:
+      skip: match(python, '<3.14')
     requirements:
       host:
         - python
