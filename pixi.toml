@@ -41,50 +41,185 @@ description = "Build importlib_metadata-feedstock directly (without setup script
 cmd = "conda-build debug recipe"
 description = "Debug importlib_metadata-feedstock directly (without setup scripts), no particular variant specified"
 [feature.build.tasks."build-"]
-cmd = "conda-build build recipe -m .ci_support/linux_64_.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_.yaml"
-description = "Build importlib_metadata-feedstock with variant linux_64_ directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_"]
-cmd = "conda-build debug recipe -m .ci_support/linux_64_.yaml"
-description = "Debug importlib_metadata-feedstock with variant linux_64_ directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_"
+cmd = "conda-build build recipe -m .ci_support/linux_64_python3.11.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_python3.11.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_python3.11.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/linux_64_python3.11.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.11.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_python3.11.____cpython"
 [feature.build.tasks."build-"]
-cmd = "conda-build build recipe -m .ci_support/linux_aarch64_.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_aarch64_.yaml"
-description = "Build importlib_metadata-feedstock with variant linux_aarch64_ directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_"]
-cmd = "conda-build debug recipe -m .ci_support/linux_aarch64_.yaml"
-description = "Debug importlib_metadata-feedstock with variant linux_aarch64_ directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_"
+cmd = "conda-build build recipe -m .ci_support/linux_64_python3.12.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_python3.12.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_python3.12.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/linux_64_python3.12.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.12.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_python3.12.____cpython"
 [feature.build.tasks."build-"]
-cmd = "conda-build build recipe -m .ci_support/osx_64_.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_.yaml"
-description = "Build importlib_metadata-feedstock with variant osx_64_ directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_"]
-cmd = "conda-build debug recipe -m .ci_support/osx_64_.yaml"
-description = "Debug importlib_metadata-feedstock with variant osx_64_ directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_"
+cmd = "conda-build build recipe -m .ci_support/linux_64_python3.13.____cp313.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_python3.13.____cp313.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_python3.13.____cp313"]
+cmd = "conda-build debug recipe -m .ci_support/linux_64_python3.13.____cp313.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.13.____cp313.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_python3.13.____cp313"
 [feature.build.tasks."build-"]
-cmd = "conda-build build recipe -m .ci_support/osx_arm64_.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_.yaml"
-description = "Build importlib_metadata-feedstock with variant osx_arm64_ directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_"]
-cmd = "conda-build debug recipe -m .ci_support/osx_arm64_.yaml"
-description = "Debug importlib_metadata-feedstock with variant osx_arm64_ directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_"
+cmd = "conda-build build recipe -m .ci_support/linux_64_python3.14.____cp314.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_python3.14.____cp314.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_python3.14.____cp314"]
+cmd = "conda-build debug recipe -m .ci_support/linux_64_python3.14.____cp314.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.14.____cp314.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_64_python3.14.____cp314"
 [feature.build.tasks."build-"]
-cmd = "conda-build build recipe -m .ci_support/win_64_.yaml --suppress-variables --clobber-file .ci_support/clobber_win_64_.yaml"
-description = "Build importlib_metadata-feedstock with variant win_64_ directly (without setup scripts)"
-[feature.build.tasks."debug-win_64_"]
-cmd = "conda-build debug recipe -m .ci_support/win_64_.yaml"
-description = "Debug importlib_metadata-feedstock with variant win_64_ directly (without setup scripts)"
-[feature.build.tasks."inspect-win_64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_.yaml"
-description = "List contents of importlib_metadata-feedstock packages built for variant win_64_"
+cmd = "conda-build build recipe -m .ci_support/linux_aarch64_python3.11.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_aarch64_python3.11.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_aarch64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_python3.11.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/linux_aarch64_python3.11.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_aarch64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.11.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_python3.11.____cpython"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/linux_aarch64_python3.12.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_aarch64_python3.12.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_aarch64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_python3.12.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/linux_aarch64_python3.12.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_aarch64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.12.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_python3.12.____cpython"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/linux_aarch64_python3.13.____cp313.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_aarch64_python3.13.____cp313.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_aarch64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_python3.13.____cp313"]
+cmd = "conda-build debug recipe -m .ci_support/linux_aarch64_python3.13.____cp313.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_aarch64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.13.____cp313.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_python3.13.____cp313"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/linux_aarch64_python3.14.____cp314.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_aarch64_python3.14.____cp314.yaml"
+description = "Build importlib_metadata-feedstock with variant linux_aarch64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_python3.14.____cp314"]
+cmd = "conda-build debug recipe -m .ci_support/linux_aarch64_python3.14.____cp314.yaml"
+description = "Debug importlib_metadata-feedstock with variant linux_aarch64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.14.____cp314.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant linux_aarch64_python3.14.____cp314"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_64_python3.11.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_python3.11.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_python3.11.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/osx_64_python3.11.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.11.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_python3.11.____cpython"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_64_python3.12.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_python3.12.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_python3.12.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/osx_64_python3.12.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.12.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_python3.12.____cpython"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_64_python3.13.____cp313.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_python3.13.____cp313.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_python3.13.____cp313"]
+cmd = "conda-build debug recipe -m .ci_support/osx_64_python3.13.____cp313.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.13.____cp313.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_python3.13.____cp313"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_64_python3.14.____cp314.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_python3.14.____cp314.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_python3.14.____cp314"]
+cmd = "conda-build debug recipe -m .ci_support/osx_64_python3.14.____cp314.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.14.____cp314.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_64_python3.14.____cp314"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_python3.11.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_arm64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.11.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_arm64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_python3.11.____cpython"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_python3.12.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_arm64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.12.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_arm64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_python3.12.____cpython"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_python3.13.____cp313.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_arm64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.13.____cp313"]
+cmd = "conda-build debug recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_arm64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_python3.13.____cp313"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_python3.14.____cp314.yaml"
+description = "Build importlib_metadata-feedstock with variant osx_arm64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.14.____cp314"]
+cmd = "conda-build debug recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml"
+description = "Debug importlib_metadata-feedstock with variant osx_arm64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant osx_arm64_python3.14.____cp314"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/win_64_python3.11.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_win_64_python3.11.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant win_64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_python3.11.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/win_64_python3.11.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant win_64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.11.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant win_64_python3.11.____cpython"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/win_64_python3.12.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_win_64_python3.12.____cpython.yaml"
+description = "Build importlib_metadata-feedstock with variant win_64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_python3.12.____cpython"]
+cmd = "conda-build debug recipe -m .ci_support/win_64_python3.12.____cpython.yaml"
+description = "Debug importlib_metadata-feedstock with variant win_64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.12.____cpython.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant win_64_python3.12.____cpython"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/win_64_python3.13.____cp313.yaml --suppress-variables --clobber-file .ci_support/clobber_win_64_python3.13.____cp313.yaml"
+description = "Build importlib_metadata-feedstock with variant win_64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_python3.13.____cp313"]
+cmd = "conda-build debug recipe -m .ci_support/win_64_python3.13.____cp313.yaml"
+description = "Debug importlib_metadata-feedstock with variant win_64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.13.____cp313.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant win_64_python3.13.____cp313"
+[feature.build.tasks."build-"]
+cmd = "conda-build build recipe -m .ci_support/win_64_python3.14.____cp314.yaml --suppress-variables --clobber-file .ci_support/clobber_win_64_python3.14.____cp314.yaml"
+description = "Build importlib_metadata-feedstock with variant win_64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_python3.14.____cp314"]
+cmd = "conda-build debug recipe -m .ci_support/win_64_python3.14.____cp314.yaml"
+description = "Debug importlib_metadata-feedstock with variant win_64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.14.____cp314.yaml"
+description = "List contents of importlib_metadata-feedstock packages built for variant win_64_python3.14.____cp314"
 
 [environments]
 build = ["build"]
