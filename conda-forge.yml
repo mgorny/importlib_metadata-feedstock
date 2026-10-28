@@ -6,7 +6,6 @@ github:
 conda_build:
   pkg_format: '2'
 conda_forge_output_validation: true
-conda_install_tool: pixi
 provider:
   linux_aarch64: default
   osx_64: default
