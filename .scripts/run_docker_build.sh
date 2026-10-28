@@ -69,6 +69,11 @@ if [ -z "${DOCKER_IMAGE}" ]; then
     fi
 fi
 
+if [ -z "${DOCKER_PLATFORM}" ]; then
+    # this is set unconditionally in the variant configs -> no fallback
+    DOCKER_PLATFORM=$(cat .ci_support/${CONFIG}.yaml | grep '^DOCKER_PLATFORM:$' -A 1 | tail -n 1 | cut -b 3-)
+fi
+
 mkdir -p "$ARTIFACTS"
 DONE_CANARY="$ARTIFACTS/conda-forge-build-done-${CONFIG}"
 rm -f "$DONE_CANARY"
@@ -110,7 +115,7 @@ fi
 export UPLOAD_PACKAGES="${UPLOAD_PACKAGES:-True}"
 export IS_PR_BUILD="${IS_PR_BUILD:-False}"
 
-${DOCKER_EXECUTABLE} pull "${DOCKER_IMAGE}"
+${DOCKER_EXECUTABLE} pull --platform ${DOCKER_PLATFORM} "${DOCKER_IMAGE}"
 
 ${DOCKER_EXECUTABLE} run ${DOCKER_RUN_ARGS} \
            -v "${RECIPE_ROOT}":/home/conda/recipe_root:rw${VOLUME_SUFFIX},delegated \
@@ -124,11 +129,9 @@ ${DOCKER_EXECUTABLE} run ${DOCKER_RUN_ARGS} \
            -e GIT_BRANCH \
            -e GITHUB_ACTIONS \
            -e HOST_USER_ID \
-           -e IS_PR_BUILD \
            -e RATTLER_BUILD_COLOR \
            -e RATTLER_BUILD_ENABLE_GITHUB_INTEGRATION \
            -e UPLOAD_ON_BRANCH \
-           -e UPLOAD_PACKAGES \
            -e flow_run_id \
            -e remote_url \
            -e sha \
@@ -137,7 +140,7 @@ ${DOCKER_EXECUTABLE} run ${DOCKER_RUN_ARGS} \
            -e STAGING_BINSTAR_TOKEN \
            "${DOCKER_IMAGE}" \
            bash \
-           "/home/conda/feedstock_root/${PROVIDER_DIR}/build_steps.sh"
+           "/home/conda/feedstock_root/${PROVIDER_DIR}/build_steps.sh" "$@"
 
 # verify that the end of the script was reached
 test -f "$DONE_CANARY"
